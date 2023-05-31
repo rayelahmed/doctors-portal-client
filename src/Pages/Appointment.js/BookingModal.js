@@ -5,7 +5,7 @@ import { format } from "date-fns";
 import { toast } from "react-toastify";
 
 const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
-  const { _id, name, slots } = treatment;
+  const { _id, name: treatmentName, slots } = treatment;
   const [user] = useAuthState(auth);
 
   const formattedDate = format(selectedDate, "PP");
@@ -20,9 +20,11 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const phone = event.target.phone.value;
+
     const booking = {
       treatmentId: _id,
       patient: name,
+      treatment: treatmentName,
       date: formattedDate,
       slot,
       email,
@@ -49,8 +51,6 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
 
   // ...
 
-  // ...
-
   return (
     <div>
       <input type="checkbox" id="booking-modal" className="modal-toggle" />
@@ -62,7 +62,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
           >
             ✕
           </label>
-          <h3 className="font-bold text-lg  text-center ">{name}</h3>
+          <h3 className="font-bold text-lg  text-center ">{treatmentName}</h3>
           <form
             onSubmit={handleBooking}
             className="grid grid-cols-1 gap-3 mt-10"

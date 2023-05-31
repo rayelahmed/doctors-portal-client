@@ -8,12 +8,12 @@ import Loading from "../Shared/Loading";
 const AvailableSlots = ({ selectedDate }) => {
   const [services, setServices] = useState([]);
   const [treatment, setTreatment] = useState(null);
-  const date = format(selectedDate, "PP");
+  const formattedDate = format(selectedDate, "PP");
   useEffect(() => {
-    fetch(`http://localhost:5000/service`)
+    fetch(`http://localhost:5000/available?date=${formattedDate}`)
       .then((res) => res.json())
       .then((data) => setServices(data));
-  }, []);
+  }, [formattedDate]);
 
   return (
     <div className="slots-section">

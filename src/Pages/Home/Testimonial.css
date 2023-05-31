@@ -1,0 +1,35 @@
+.testimonial-sectiion {
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-bottom: 50px;
+  padding-top: 84px;
+}
+
+.testimonial-section h3 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 114.68%;
+
+  color: #3a4256;
+}
+.testimonial-section h6 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 114.68%;
+  /* identical to box height, or 23px */
+
+  color: #19d3ae;
+}
+
+.testimonial-cards {
+  margin-top: 146px;
+}
+.testimonial-card {
+  background: #ffffff;
+  box-shadow: 3px 4px 10px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+}

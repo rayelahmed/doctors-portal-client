@@ -1,0 +1,14 @@
+.contact-us {
+  margin-top: 65px;
+  margin-bottom: 154px;
+}
+
+.contact-us .input {
+  width: 450px;
+  height: 48px;
+}
+
+.contact-us .textarea {
+  width: 450px;
+  height: 136px;
+}

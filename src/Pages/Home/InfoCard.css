@@ -1,0 +1,20 @@
+.info-card {
+  margin-left: 26px;
+  margin-right: 26px;
+}
+.card-body {
+  display: flex;
+}
+.icon img {
+  padding-top: 19px;
+  padding-left: 24px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .icon img {
+    padding-top: 19px;
+  }
+  .grid-cols-1 .card {
+    margin-top: 30px;
+  }
+}

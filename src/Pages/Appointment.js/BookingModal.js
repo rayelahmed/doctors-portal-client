@@ -4,13 +4,11 @@ import auth from "../../firebase.init";
 import { format } from "date-fns";
 import { toast } from "react-toastify";
 
-const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
+const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
   const { _id, name: treatmentName, slots } = treatment;
   const [user] = useAuthState(auth);
 
   const formattedDate = format(selectedDate, "PP");
-
-  // ...
 
   // ...
 
@@ -45,6 +43,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
         } else {
           toast(data.message);
         }
+        refetch();
         setTreatment(null);
       });
   };

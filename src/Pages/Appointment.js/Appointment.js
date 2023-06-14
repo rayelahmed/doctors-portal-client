@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import AppointmentBanner from "./AppointmentBanner";
-// import AvailableAppointment from "./AvailableAppointment";
 import Footer from "../Shared/Footer/Footer";
 import AvailableSlots from "./AvailableSlots";
 

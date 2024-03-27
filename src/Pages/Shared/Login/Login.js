@@ -41,7 +41,7 @@ const Login = () => {
     signInWithEmailAndPassword(data.email, data.password)
       .then(() => {
         setIsLoggedIn(true);
-        navigate("/appointment"); // Navigate to the appointment page
+        navigate("/appointment");
       })
       .catch((error) => {
         setSingingError(error.message);
@@ -49,7 +49,7 @@ const Login = () => {
   };
 
   if (isLoggedIn) {
-    return null; // or any other component you want to render after login
+    return null;
   }
 
   return (
@@ -76,7 +76,7 @@ const Login = () => {
                     },
                     pattern: {
                       value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                      message: "Provide Valid Email", // JS only: <p>error message</p> TS only support string
+                      message: "Provide Valid Email",
                     },
                   })}
                 />
@@ -110,7 +110,7 @@ const Login = () => {
                     },
                     minLength: {
                       value: 6,
-                      message: "Your password must be 6 charecter or longer",
+                      message: "Your password must be 6 character or longer",
                     },
                   })}
                 />
@@ -138,7 +138,7 @@ const Login = () => {
               />
             </form>
             <p>
-              New to Doctors Portal{" "}
+              New to Doctors Portal
               <Link to="/signup" className="text-primary">
                 Create New Account
               </Link>

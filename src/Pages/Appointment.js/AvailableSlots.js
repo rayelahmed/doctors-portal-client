@@ -14,9 +14,9 @@ const AvailableSlots = ({ selectedDate }) => {
     isLoading,
     refetch,
   } = useQuery(["available", formattedDate], () =>
-    fetch(`http://localhost:5000/available?date=${formattedDate}`).then((res) =>
-      res.json()
-    )
+    fetch(`services.json`)
+      .then((res) => res.json())
+      .then((data) => console.log(data))
   );
 
   if (isLoading) {
